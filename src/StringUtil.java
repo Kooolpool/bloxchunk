@@ -42,6 +42,9 @@ public class StringUtil {
 		}
 		return output;
 	}
+	public static String getDificultyString(int difficulty) {
+		return new String(new char[difficulty]).replace('\0', '0');
+	}
 	
 	//Verifies a String signature 
 	public static boolean verifyECDSASig(PublicKey publicKey, String data, byte[] signature) {
